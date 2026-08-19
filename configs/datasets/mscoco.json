@@ -1,0 +1,12 @@
+{
+  "name": "mscoco",
+  "loader": "hdf5",
+  "path": "data/mscoco/MSCOCO_CLIP_image_CLIP_text_sonclass.mat",
+  "modalities": {
+    "image": {"field": "Images", "sample_axis": 1},
+    "text": {"field": "Texts", "sample_axis": 1}
+  },
+  "labels": {"field": "Labels", "sample_axis": 1},
+  "ids": {"field": "Idx", "sample_axis": 1}
+}
+

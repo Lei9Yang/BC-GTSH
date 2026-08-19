@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "BC-GTSH: Bi-view Continual Graph-Transferred Semantic Hashing"
+type: software
+version: 1.0.0
+date-released: 2026-08-15
+authors:
+  - given-names: "Xing"
+    family-names: "Tian"
+  - given-names: "Yang"
+    family-names: "Lei"
+  - given-names: "Haowen"
+    family-names: "Liang"
+  - given-names: "Wen"
+    family-names: "Li"
+  - given-names: "Ziying"
+    family-names: "Tan"
+  - given-names: "Wing W. Y."
+    family-names: "Ng"
+  - given-names: "Marcello"
+    family-names: "Pelillo"
+license: Apache-2.0

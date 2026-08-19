@@ -1,0 +1,19 @@
+name: bc-gtsh
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch=2.6
+  - pytorch-cuda=12.4
+  - numpy=2.1
+  - scipy=1.15
+  - h5py=3.14
+  - matplotlib=3.10
+  - pillow=11
+  - pytest=8
+  - pip
+  - pip:
+      - build>=1.2
+

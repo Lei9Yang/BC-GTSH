@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-08-15",
+  "tests": {
+    "pytest": "29 passed",
+    "ruff": "passed",
+    "wheel_build": "passed",
+    "isolated_wheel_cli": "passed",
+    "cpu_smoke": "passed",
+    "paper_assets": "passed",
+    "sanitized_run_manifest": "342 unique logical records; row and file hashes verified",
+    "iapr_pairblind": "12 runs use batch 128, 90 epochs, lr 0.002, k 20/20, and temperature 0.2"
+  },
+  "dataset_audits": {
+    "mscoco": {
+      "samples": 121846,
+      "classes": 80,
+      "image_dim": 512,
+      "text_dim": 512,
+      "stages": 10,
+      "source_overlap": 0,
+      "test_queries": 5000,
+      "sha256": "73b5a5634999978878fe34f765ca8768b8fe22f404889769c7c4795c10c89d80"
+    },
+    "nuswide81": {
+      "samples": 209347,
+      "classes": 81,
+      "image_dim": 512,
+      "text_dim": 512,
+      "stages": 10,
+      "source_overlap": 0,
+      "test_queries": 5000,
+      "sha256": "187375b7dd80d92e14fa14645bd24daf195e6835d006c0710cdf2f568c0e6066"
+    },
+    "iapr": {
+      "samples": 19999,
+      "classes": 255,
+      "image_dim": 512,
+      "text_dim": 512,
+      "stages": 10,
+      "source_overlap": 0,
+      "test_queries": 2000,
+      "sha256": "0ca451ed6f2dc850b9bcba6f7018f5326878a1b3ff6c5470eb475920f738af60"
+    }
+  },
+  "parity": {
+    "two_stage_training_fixture": "exact continuous and binary codes",
+    "mscoco_64bit_seed6513_query_image_codes": "exact",
+    "mscoco_64bit_seed6513_query_text_codes": "exact"
+  }
+}

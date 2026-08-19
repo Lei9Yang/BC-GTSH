@@ -1,0 +1,12 @@
+{
+  "dataset": "mscoco",
+  "epochs": 30,
+  "mini_batch_size": 256,
+  "lr": 0.001,
+  "topology_intra_k": 5,
+  "topology_cross_k": 5,
+  "topology_teacher_temperature": 0.1,
+  "bits": [16, 32, 64, 128],
+  "seeds": [2096, 6513, 9231]
+}
+

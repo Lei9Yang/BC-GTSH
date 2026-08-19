@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "status": "complete",
+  "method": "BC-GTSH Row-KL",
+  "release_transform": "Aggregated from frozen experiment records; local paths and third-party source code excluded.",
+  "counts": {
+    "full": 36,
+    "uih_reference": 36,
+    "structural_ablation": 144,
+    "static_s1": 36,
+    "pairblind": 36,
+    "sensitivity": 45,
+    "nonclip_robustness": 9
+  },
+  "run_manifest": {
+    "file": "runs.csv",
+    "row_count": 342,
+    "sha256": "0d89124f93532a97c74a7f4b4eb238adde22adaf3025bc82efae6d41e38199a0",
+    "privacy": "Local paths, commands, worker metadata, and machine identifiers are excluded."
+  },
+  "release_parity": {
+    "dataset": "mscoco",
+    "bit": 64,
+    "seed": 6513,
+    "checkpoint_sha256": "7767194f8328229955331179bb35f7a18d18abc8db3b623296d45ff1792aa84a",
+    "visualization_artifact_sha256": "1c8a45259500df309af502af2bbc20ddac229aac5a75d03d1b96646db6833d5c",
+    "query_image_codes_equal": true,
+    "query_text_codes_equal": true,
+    "max_image_embedding_error": 0.000006109476,
+    "max_text_embedding_error": 0.0000045597553,
+    "two_stage_fixture_continuous_codes_equal": true,
+    "two_stage_fixture_binary_codes_equal": true
+  },
+  "original_sources_sha256": {
+    "strict_online.csv": "3ff8522f925fa8dc6d740798319901f969b7bba377f004515ff923a9f7c5dbbe",
+    "formal_runs.csv": "ad60e76702c8b2f5668624c717e6425f9217eea9494507209f7a23b805aa738e",
+    "bc-gtsh-nohub-ablation-v1/formal_runs.csv": "88ce403f2bc9c731a3ff918df0b94ae7b26e245939ddcf3735c00a6834396849",
+    "strict_unpaired_final.csv": "58a0fe75053d4cce0bd4c48447314d0a15e3f34ab963424a5472a792800eb7e0",
+    "paired_online_oracle.csv": "3fcfab133b50094d26a5f0d5ec381b60c3909ad7072cd22125214cf1d3277e51",
+    "sensitivity_curves.csv": "4167babb312520646beebf2623137c9dc66336039a46218a4102eaf3facc1ec9"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "nuswide81",
+  "loader": "hdf5",
+  "path": "data/nuswide81/NUSwide_CLIP_image_CLIP_text.mat",
+  "modalities": {
+    "image": {"field": "Images", "sample_axis": 1},
+    "text": {"field": "Texts", "sample_axis": 1}
+  },
+  "labels": {"field": "Labels", "sample_axis": 1},
+  "ids": {"field": "Idx", "sample_axis": 1}
+}
+
