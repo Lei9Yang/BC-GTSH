@@ -2,14 +2,17 @@
 
 ## Feature schema
 
+The feature files used in the experiments are publicly available from
+[Baidu Cloud](https://pan.baidu.com/s/1BfMpHnTU3Dd3sU_XVA0lbg?pwd=1234) (Passwd: `1234`).
+
 The three formal datasets use MATLAB v7.3/HDF5 containers:
 
-| Field | Meaning | Stored shape |
-|---|---|---|
+| Field    | Meaning                     | Stored shape                |
+| -------- | --------------------------- | --------------------------- |
 | `Images` | frozen image representation | feature dimension x samples |
-| `Texts` | frozen text representation | feature dimension x samples |
-| `Labels` | multi-hot labels | classes x samples |
-| `Idx` | unique source IDs | 1 x samples |
+| `Texts`  | frozen text representation  | feature dimension x samples |
+| `Labels` | multi-hot labels            | classes x samples           |
+| `Idx`    | unique source IDs           | 1 x samples                 |
 
 The primary experiments use 512-dimensional CLIP representations. Labels are
 used during training to construct the privileged teacher graph and during
@@ -31,19 +34,22 @@ under `protocols/<dataset>/pairblind/test/seed-<seed>/`.
 
 The verifier checks:
 
-- validation and test query sets are disjoint;
-- queries never enter the training stream;
-- strict image and text training source sets have zero overlap;
-- a training source occurs in exactly one stage;
-- ten stages cover the complete training pool;
-- the protocol indices and feature file match their SHA-256 records.
+* validation and test query sets are disjoint;
+* queries never enter the training stream;
+* strict image and text training source sets have zero overlap;
+* a training source occurs in exactly one stage;
+* ten stages cover the complete training pool;
+* the protocol indices and feature file match their SHA-256 records.
 
 The protocol manifest stores a release-relative dataset path. This field is
 informational; the hash is authoritative.
 
 ## Alternate representations
 
-The bundled evidence includes the paper's MSCOCO VGG19+BOW robustness result,
-but the alternate feature file and extractor repository are not redistributed.
-Users may provide an HDF5 file with the same four fields and run the public
-method after defining an equivalent dataset specification.
+The bundled evidence includes the paper's MSCOCO VGG19+BOW robustness result.
+The corresponding VGG19+BOW feature file is distributed together with the
+released experimental features through the Baidu Cloud link above.
+
+The VGG19+BOW representation is used only for the robustness experiment and is
+not part of the primary CLIP-based experimental setting. It follows the same
+four-field HDF5 schema described above.
