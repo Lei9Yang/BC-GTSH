@@ -1,7 +1,6 @@
 # BC-GTSH
 
-> Repository URL placeholder (replace before public release):
-> https://github.com/REPLACE-WITH-ACCOUNT/BC-GTSH
+
 
 Official reproducibility code for **BC-GTSH: Bi-view Continual
 Graph-Transferred Semantic Hashing**. The implementation addresses continual
@@ -10,11 +9,11 @@ and previously committed gallery codes cannot be rewritten.
 
 The released objective is
 
-\[
+$$
 \mathcal{L}=\lambda_{\mathrm{top}}\mathcal{L}_{\mathrm{RowKL}}
 +\lambda_{\mathrm{quant}}\mathcal{L}_{\mathrm{quant}}
 +\lambda_{\mathrm{bit}}\mathcal{L}_{\mathrm{bit}}.
-\]
+$$
 
 Training labels provide privileged semantic topology. Inference uses only the
 modality encoder and the shared hash layer.
@@ -43,25 +42,26 @@ The toy data are generated deterministically and are not used for paper results.
 
 ## Data
 
-Feature files are deliberately not distributed. Place them under `data/`:
+The training feature files used in the experiments are publicly available from
+[Baidu Cloud](https://pan.baidu.com/s/1BfMpHnTU3Dd3sU_XVA0lbg?pwd=1234) (Passwd: `1234`)
 
-```text
+
+After downloading, place the feature files under data/ using the following
+directory structure:
+
 data/
 |-- mscoco/MSCOCO_CLIP_image_CLIP_text_sonclass.mat
 |-- nuswide81/NUSwide_CLIP_image_CLIP_text.mat
 `-- iapr/IAPR_CLIP_image_CLIP_text.mat
-```
 
-Each HDF5/MAT file must contain `Images`, `Texts`, `Labels`, and `Idx`. Samples
+Each HDF5/MAT file must contain Images, Texts, Labels, and Idx. Samples
 are stored along axis 1 in the released feature files. Exact hashes and field
-semantics are documented in `docs/DATA.md`.
+semantics are documented in docs/DATA.md.
 
 Audit the data and frozen protocol before training:
 
-```bash
 bc-gtsh data audit --dataset mscoco --data-root data
 bc-gtsh protocol verify --dataset mscoco --split test --data-root data
-```
 
 ## Experiments
 
@@ -129,18 +129,6 @@ MSCOCO images and captions and are skipped when that media is unavailable.
 
 The tracks must not be combined into a single fairness ranking.
 
-## Citation
-
-```bibtex
-@software{bc_gtsh_2026,
-  author = {Tian, Xing and Lei, Yang and Liang, Haowen and Li, Wen and
-            Tan, Ziying and Ng, Wing W. Y. and Pelillo, Marcello},
-  title = {BC-GTSH: Bi-view Continual Graph-Transferred Semantic Hashing},
-  year = {2026},
-  version = {1.0.0},
-  url = {https://github.com/REPLACE-WITH-ACCOUNT/BC-GTSH}
-}
-```
 
 Replace the repository placeholder and add the final article DOI before the
 archival release.
